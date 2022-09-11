@@ -39,4 +39,11 @@ func main() {
 
 	val := fmt.Sprint(2333.444)
 	fmt.Printf("Convert float to string, with val: %s\n", val)
+
+	fmt.Println("Converting between strings and bytes")
+	lotr := "you shall not pass"
+	lotrByte := []byte(lotr)
+	fmt.Println("My lotrByte", lotrByte)
+	fmt.Println("My string ", lotr)
+
 }

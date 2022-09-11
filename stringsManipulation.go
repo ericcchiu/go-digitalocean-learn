@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"strconv"
 	"strings"
 )
 
@@ -15,5 +17,15 @@ func main() {
 	fmt.Printf("%q", strings.Fields(data))
 	fmt.Println("")
 	fmt.Println(strings.ReplaceAll(s, "time", "changed"))
+
+	fmt.Println("Convert numbers to string" + strconv.Itoa(1000))
+
+	num, err := strconv.ParseFloat("123.1", 64)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	fmt.Println(num)
+
+	fmt.Println(strconv.ParseFloat("3.14", 32))
 
 }
